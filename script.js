@@ -1,12 +1,7 @@
 'use strict';
 
+
 let numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
-let oneMovie = prompt('Один из последних просмотренных фильмов?', '');
-let oneFilmScore = prompt('На сколько оцените его?', '');
-let secondMovie = prompt('Один из последних просмотренных фильмов?', '');
-let secondFilmScore = prompt('На сколько оцените его?', '');
-
-
 
 let personalMovieDB = {
     count: numberOfFilms,
@@ -16,7 +11,17 @@ let personalMovieDB = {
     privat: false
 };
 
-personalMovieDB.movies[oneMovie] = oneFilmScore;
-personalMovieDB.movies[secondMovie] = secondFilmScore;
+
+for (let i = 0; i < 2; i++) {
+    let movie = prompt('Один из последних просмотренных фильмов?', '');
+    let filmScore = prompt('На сколько оцените его?', '');
+
+    if (movie == '' || filmScore == '' || movie == null || filmScore == null || movie.length >= 50 || filmScore.length >= 50) {
+        alert('Строка не может быть пустой, её нельзя отменить, длинна строки не должна привышать 50 символов.');
+        i--;
+    } else {
+        personalMovieDB.movies[movie] = filmScore;
+    }
+}
 
 console.log(personalMovieDB);
