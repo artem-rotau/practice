@@ -20,16 +20,16 @@ if (numberOfFilms <= 10) {
 }
 
 
-// for (let i = 0; i < 2; i++) {
-//     let movie = prompt('Один из последних просмотренных фильмов?', '');
-//     let filmScore = prompt('На сколько оцените его?', '');
+for (let i = 0; i < 2; i++) {
+    let movie = prompt('Один из последних просмотренных фильмов?', '');
+    let filmScore = prompt('На сколько оцените его?', '');
 
-//     if (movie == '' || filmScore == '' || movie == null || filmScore == null || movie.length >= 50 || filmScore.length >= 50) {
-//         alert('Строка не может быть пустой, её нельзя отменить, длинна строки не должна привышать 50 символов.');
-//         i--;
-//     } else {
-//         personalMovieDB.movies[movie] = filmScore;
-//     }
-// }
+    if (movie == '' || filmScore == '' || movie == null || filmScore == null || movie.length >= 50 || filmScore.length >= 50) {
+        alert('Строка не может быть пустой, её нельзя отменить, длинна строки не должна привышать 50 символов.');
+        i--;
+    } else {
+        personalMovieDB.movies[movie] = filmScore;
+    }
+}
 
-// console.log(personalMovieDB);
+console.log(personalMovieDB);
