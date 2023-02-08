@@ -11,17 +11,25 @@ let personalMovieDB = {
     privat: false
 };
 
-
-for (let i = 0; i < 2; i++) {
-    let movie = prompt('Один из последних просмотренных фильмов?', '');
-    let filmScore = prompt('На сколько оцените его?', '');
-
-    if (movie == '' || filmScore == '' || movie == null || filmScore == null || movie.length >= 50 || filmScore.length >= 50) {
-        alert('Строка не может быть пустой, её нельзя отменить, длинна строки не должна привышать 50 символов.');
-        i--;
-    } else {
-        personalMovieDB.movies[movie] = filmScore;
-    }
+if (numberOfFilms <= 10) {
+    alert('Просмотренно мало фильмов.');
+} else if (numberOfFilms > 10 && numberOfFilms <= 30) {
+    alert('Вы классический зритель.');
+} else if (numberOfFilms > 30) {
+    alert('Вы киноман.');
 }
 
-console.log(personalMovieDB);
+
+// for (let i = 0; i < 2; i++) {
+//     let movie = prompt('Один из последних просмотренных фильмов?', '');
+//     let filmScore = prompt('На сколько оцените его?', '');
+
+//     if (movie == '' || filmScore == '' || movie == null || filmScore == null || movie.length >= 50 || filmScore.length >= 50) {
+//         alert('Строка не может быть пустой, её нельзя отменить, длинна строки не должна привышать 50 символов.');
+//         i--;
+//     } else {
+//         personalMovieDB.movies[movie] = filmScore;
+//     }
+// }
+
+// console.log(personalMovieDB);
